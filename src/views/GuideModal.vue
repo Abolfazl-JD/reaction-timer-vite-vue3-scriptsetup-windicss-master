@@ -27,7 +27,7 @@ const { t } = useI18n()
     </p>
     <button
       @click="router.push({ name: 'reaction-game' })"
-      class="game-btn tracking-5px"
+      class="game-btn tracking-2px"
     >
       {{ t('start') }}
     </button>
