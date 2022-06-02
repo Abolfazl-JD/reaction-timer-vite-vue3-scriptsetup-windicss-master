@@ -8,13 +8,17 @@ const playAgain = () => {
   reactionTimerData.$reset()
   router.push({ name: "reaction-game" })
 }
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="w-full text-center relative top-28">
-    <button @click="playAgain" class="game-btn tracking-1px">Play again</button>
+    <button @click="playAgain" class="game-btn tracking-1px">
+      {{ t('gameResult.again') }}
+    </button>
     <p class="mt-5 dark:text-white">
-      Reaction time - {{ reactionTimerData.gameResult }}
+      {{ t('gameResult.reaction-time') }} - {{ reactionTimerData.gameResult }}
     </p>
     <h4 class="text-2xl font-bold text-green-500 mt-7">
       {{ reactionTimerData.rank }}

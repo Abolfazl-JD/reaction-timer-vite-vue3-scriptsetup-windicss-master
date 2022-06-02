@@ -1,27 +1,35 @@
 {
     "title" : "𝑅𝑒𝒶𝒸𝓉𝒾𝑜𝓃 𝓉𝒾𝓂𝑒𝓇",
-    "completedTime" : "now",
-    "wait-message" : "waiting for green box ...",
-    "again" : "Play again",
-    "reaction-time" : "Reaction time",
+    "gameBox" : {
+        "completedTime" : "now",
+        "wait-message" : "waiting for green box ..."
+    },
+    "gameResult" : {
+        "again" : "Play again",
+        "reaction-time" : "Reaction time"
+    },
     "click-soon" : "Ooh no ! you clicked soon",
     "wait" : "wait until the",
     "red" : "red",
     "green" : "green",
     "turn" : "box turns",
-    "restart" : "restart",
+    "restart" : "try again",
 
-    "welcome" : "Welcome to reaction timer game",
-    "intro" : "This game is for calculating your reaction time.",
-    "intro-wait" : "  After clicking start button , @:wait",
-    "intro-part2" : "the time it takes that you click the box after being green; is your reaction time.",
-    "let's-start" : "Let's start !",
+    "intro" : {
+        "welcome" : "Welcome to reaction timer game",
+        "body" : "This game is for calculating your reaction time.",
+        "wait" : "  After clicking start button , @:wait",
+        "part2" : "the time it takes that you click the box after being green; is your reaction time.",
+        "lets-start" : "Let's start !"
+    },
 
     "start" : "start",
 
-    "you" : "you are",
-    "very-fast" : "@:you very fast",
-    "bit-fast" : "@:you a bit fast",
-    "slow" : "@:you slow",
-    "lazy" : "@:you super lazy"
+    "rank" : {
+        "you" : "you are",
+        "very-fast" : "@:rank.you very fast",
+        "bit-fast" : "@:rank.you a bit fast",
+        "slow" : "@:rank.you slow",
+        "lazy" : "@:rank.you super lazy"
+    }
 }

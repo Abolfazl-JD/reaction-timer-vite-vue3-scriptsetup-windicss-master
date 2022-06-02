@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import router from "@/router"
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -9,26 +11,25 @@ import router from "@/router"
     <h2
       class="text-green-800 dark:text-green-200 font-bold text-3xl text-center"
     >
-      Welcome to reaction timer game
+      {{ t('intro.welcome') }}
     </h2>
     <p class="mt-10 text-xl dark:text-white">
-      This game is for calculating your reaction time.
+      {{ t('intro.body') }}
     </p>
     <p class="mt-2 leading-8 text-gray-700 dark:text-gray-300 text-lg">
-      After clicking start button , wait until the
-      <span class="text-red-500">red</span> box turns
-      <span class="text-green-500">green</span> ,
+      {{ t('intro.wait') }}
+      <span class="text-red-500">{{ t('red') }}</span> {{ t('turn') }}
+      <span class="text-green-500">{{ t('green') }}</span> ,
       <b
-        >the time it takes that you click the box after being green; is your
-        reaction time.</b
+        >{{ t('intro.part2') }}</b
       >
-      Let's start !
+      {{ t('intro.lets-start') }}
     </p>
     <button
       @click="router.push({ name: 'reaction-game' })"
       class="game-btn tracking-5px"
     >
-      START
+      {{ t('start') }}
     </button>
   </div>
 </template>

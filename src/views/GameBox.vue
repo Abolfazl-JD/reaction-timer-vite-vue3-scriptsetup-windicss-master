@@ -41,11 +41,15 @@ const warnUser = () => {
   reactionTimerData.$reset()
   router.push({ name: "game-warn" })
 }
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div v-if="showBoxGame">
-    <h2 class="text-green-600 dark:text-green-400 game-title">Now</h2>
+    <h2 class="text-green-600 dark:text-green-400 game-title">
+      {{ t('gameBox.completedTime') }}
+    </h2>
     <div
       @click="showResult"
       class="bg-green-500 dark:bg-green-600 box-game"
@@ -53,7 +57,7 @@ const warnUser = () => {
   </div>
   <div v-else>
     <h2 class="text-red-600 dark:text-red-400 game-title">
-      waiting for green box ...
+      {{ t('gameBox.wait-message') }}
     </h2>
     <div @click="warnUser" class="bg-red-500 dark:bg-red-600 box-game"></div>
   </div>
