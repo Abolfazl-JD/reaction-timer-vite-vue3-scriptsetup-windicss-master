@@ -6,7 +6,10 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite-plugin-pwa/client"],
+    "types": [
+      "vite-plugin-pwa/client",
+      "@intlify/vite-plugin-vue-i18n/client"
+    ],
     "lib": ["ESNext", "DOM", "WebWorker"]
   },
 
