@@ -4,7 +4,7 @@ import fa from './src/locales/fa.json'
 
 const I18n = createI18n({
     legacy: false,
-    locale: 'en',
+    locale: 'fa',
     fallbackLocale : 'en',
     messages: {
         en,
