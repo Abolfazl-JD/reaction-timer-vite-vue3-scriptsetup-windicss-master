@@ -1,7 +1,9 @@
 import { fileURLToPath, URL } from "url"
+import path from 'path'
 
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import WindiCSS from "vite-plugin-windicss"
 import { VitePWA } from "vite-plugin-pwa"
 
@@ -10,6 +12,10 @@ export default defineConfig({
   plugins: [
     vue(),
     WindiCSS(),
+    vueI18n({
+      include: path.resolve(__dirname, './src/locales/**'),
+      compositionOnly: true
+    }),
     VitePWA({
       mode: "development",
       base: "/",
