@@ -55,9 +55,11 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: [
-        'vue-i18n',
-      ],
+      imports: [{
+        'vue-i18n': [
+          'useI18n'
+        ]
+      }],
       dts: 'src/auto-imports.d.ts',
     }),
   ],

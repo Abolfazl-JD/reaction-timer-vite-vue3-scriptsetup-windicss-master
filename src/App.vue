@@ -14,6 +14,10 @@ const goToHomePage = () => {
   router.push({ name: "handbook" })
   reactionTimerData.$reset()
 }
+
+const { locale, t } = useI18n({
+    useScope: 'global',
+})
 </script>
 
 <template>
@@ -25,7 +29,7 @@ const goToHomePage = () => {
           class="text-white font-bold text-3xl cursor-pointer"
           @click="goToHomePage"
         >
-          𝑅𝑒𝒶𝒸𝓉𝒾𝑜𝓃 𝓉𝒾𝓂𝑒𝓇
+          {{ t('title') }}
         </h1>
         <div class="theme-switcher sm:pr-5" @click="toggleThemeMode()">
           <transition mode="out-in" name="theme-switch">
