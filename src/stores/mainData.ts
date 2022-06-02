@@ -1,4 +1,7 @@
 import { defineStore } from "pinia"
+import I18n from '../../i18n'
+
+const { t } = I18n.global
 
 export const gameData = defineStore({
   id: "game-data",
@@ -8,10 +11,10 @@ export const gameData = defineStore({
   }),
   actions: {
     determineRank() {
-      if (this.gameResult < 250) this.rank = "you're very fast "
-      else if (this.gameResult < 350) this.rank = "you're a bit fast "
-      else if (this.gameResult < 500) this.rank = "you're slow "
-      else this.rank = "you're super lazy "
+      if (this.gameResult < 250) this.rank = t('rank.very-fast')
+      else if (this.gameResult < 350) this.rank = t('rank.bit-fast')
+      else if (this.gameResult < 500) this.rank = t('rank.slow')
+      else this.rank = t('rank.lazy')
     },
   },
 })
