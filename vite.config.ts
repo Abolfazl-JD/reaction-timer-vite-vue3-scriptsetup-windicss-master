@@ -6,6 +6,7 @@ import vue from "@vitejs/plugin-vue"
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import WindiCSS from "vite-plugin-windicss"
 import { VitePWA } from "vite-plugin-pwa"
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -51,6 +52,13 @@ export default defineConfig({
           },
         ],
       },
+    }),
+
+    AutoImport({
+      imports: [
+        'vue-i18n',
+      ],
+      dts: 'src/auto-imports.d.ts',
     }),
   ],
   resolve: {
