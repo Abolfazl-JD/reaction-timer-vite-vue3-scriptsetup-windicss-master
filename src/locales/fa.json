@@ -3,14 +3,14 @@
     
     "gameBox" : {
         "completedTime" : "حالا",
-        "wait-message" : "صبر کنید تا مربع سبز ظاهر شود"
+        "wait-message" : "صبر کن تا مربع سبز ظاهر شود"
     },
     "gameResult" : {
         "again" : "شروع دوباره",
         "reaction-time" : "سرعت عمل شما"
     },
     "click-soon" : "ای بابا ! عجله کردی",
-    "wait" : "صبر کن تا مربع ",
+    "wait" : "صبر کنید تا مربع ",
     "red" : "قرمز",
     "green" : "سبز",
     "turn" : "شود",

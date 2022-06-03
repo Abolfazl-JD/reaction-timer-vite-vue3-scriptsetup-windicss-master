@@ -18,8 +18,12 @@ const { t } = useI18n()
     </p>
     <p class="mt-2 leading-8 text-gray-700 dark:text-gray-300 text-lg">
       {{ t('intro.wait') }}
-      <span class="text-red-500">{{ t('red') }}</span> {{ t('turn') }}
-      <span class="text-green-500">{{ t('green') }}</span> ,
+
+      <span class="text-red-500">{{ t('red') }}</span>
+      <span class="rtl:hidden px-1">{{ t('turn') }}</span>
+      <span class="ltr:hidden pr-1">،</span>
+      <span class="text-green-500 pr-1">{{ t('green') }}</span>
+      <span class="ltr:hidden px-1">{{ t('turn') }}</span>
       <b
         >{{ t('intro.part2') }}</b
       >
