@@ -36,7 +36,7 @@ const toggleLocaleLang = (lang : 'en' | 'fa') => {
       <nav class="w-full bg-blue-500 py-2 px-4">
         <div class="flex justify-between items-center">
           <h1
-            class="text-white font-bold text-3xl cursor-pointer"
+            class="text-white font-bold text-xl sm:text-3xl cursor-pointer"
             @click="goToHomePage"
           >
             {{ t('title') }}
