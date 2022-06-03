@@ -1,6 +1,7 @@
 <script setup lang="ts">
-// store
 import router from "@/router"
+import { watch } from "vue";
+// store
 import { gameData } from "../stores/mainData"
 const reactionTimerData = gameData()
 
@@ -9,7 +10,11 @@ const playAgain = () => {
   router.push({ name: "reaction-game" })
 }
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+watch(locale , (newLocale, prevLocale) => {
+  reactionTimerData.determineRank()
+})
 </script>
 
 <template>

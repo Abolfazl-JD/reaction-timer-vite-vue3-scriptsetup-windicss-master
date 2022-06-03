@@ -141,4 +141,5 @@ const toggleLocaleLang = (lang : 'en' | 'fa') => {
 .list-icon-leave-active{
     transition: 0.1s ease all;
 }
+
 </style>
