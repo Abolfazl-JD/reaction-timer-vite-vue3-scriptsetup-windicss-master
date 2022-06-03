@@ -10,6 +10,8 @@ const close = async () => {
 const updateSW = async () => {
     await updateServiceWorker()
 }
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -30,9 +32,9 @@ const updateSW = async () => {
     role="alert"
   >
     <div class="message mt-1">
-      <span v-if="offlineReady"> App ready to work offline </span>
+      <span v-if="offlineReady"> {{ t('pwa.ready-offline') }} </span>
       <span v-else>
-        New content available, click on reload button to update.
+        {{ t('pwa.new-content') }}
       </span>
     </div>
     <div class="buttons flex align-middle mt-2 md:mt-0">
@@ -57,7 +59,7 @@ const updateSW = async () => {
           mr-4
         "
       >
-        Reload
+        {{ t('pwa.reload') }}
       </button>
       <button
         @click="close"
@@ -78,7 +80,7 @@ const updateSW = async () => {
           focus:outline-none focus:shadow-outline-purple
         "
       >
-        Close
+        {{ t('pwa.close') }}
       </button>
     </div>
   </div>

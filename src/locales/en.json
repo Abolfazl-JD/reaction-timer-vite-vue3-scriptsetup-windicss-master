@@ -31,5 +31,12 @@
         "bit-fast" : "@:rank.you a bit fast",
         "slow" : "@:rank.you slow",
         "lazy" : "@:rank.you super lazy"
+    },
+
+    "pwa" : {
+        "ready-offline" : "App ready to work offline",
+        "new-content" : "New content available, click on reload button to update.",
+        "reload" : "Reload",
+        "close" : "close"
     }
 }
