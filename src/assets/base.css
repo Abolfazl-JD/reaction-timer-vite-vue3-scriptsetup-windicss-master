@@ -1,6 +1,15 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url(font/iransans/eot/IRANSansWeb.eot);
+    src: url(font/iransans/woff2/IRANSansWeb.woff2) format("woff2"), url(font/iransans/woff/IRANSansWeb.woff) format("woff"), url(font/iransans/ttf/IRANSansWeb.ttf) format("truetype")
+}
+
 *,
 *::before,
 *::after {
+  font-family: IRANSans !important;
   box-sizing: border-box;
   margin: 0;
   position: relative;
