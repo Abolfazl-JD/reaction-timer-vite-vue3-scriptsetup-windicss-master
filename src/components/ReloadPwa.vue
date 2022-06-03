@@ -37,7 +37,7 @@ const { t } = useI18n()
         {{ t('pwa.new-content') }}
       </span>
     </div>
-    <div class="buttons flex align-middle mt-2 md:mt-0">
+    <div class="buttons flex align-middle gap-2 mt-2 md:mt-0">
       <button
         v-if="needRefresh"
         @click="updateSW()"
@@ -56,7 +56,6 @@ const { t } = useI18n()
           active:bg-pink-600
           hover:bg-pink-700
           focus:outline-none focus:shadow-outline-purple
-          mr-4
         "
       >
         {{ t('pwa.reload') }}
