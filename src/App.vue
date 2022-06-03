@@ -25,9 +25,7 @@ const appDirection = computed(() => locale.value === 'fa' ? 'rtl' : 'ltr')
 const showLanguageSwitcher = ref(false)
 const toggleLocaleLang = (lang : 'en' | 'fa') => {
     locale.value = lang
-    setTimeout(() => {
-        showLanguageSwitcher.value = false
-    }, 100);
+    showLanguageSwitcher.value = false
 }
 </script>
 
@@ -89,13 +87,13 @@ const toggleLocaleLang = (lang : 'en' | 'fa') => {
 
               <ul v-if="showLanguageSwitcher" class="text-gray-700 w-18 absolute z-10 rounded-b shadow divide-y-1 divide-gray-200 top shadow-dark-50 bg-white">
                   <li class="flex justify-between items-center px-2  cursor-pointer hover:bg-gray-200 py-1" @click="toggleLocaleLang('en')">
-                      <span>EN</span>
+                      <span>{{ t('en') }}</span>
                       <svg v-show="locale === 'en'" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                       </svg>
                   </li>
                   <li class="flex justify-between px-2 py-1 items-center cursor-pointer hover:bg-gray-200"  @click="toggleLocaleLang('fa')">
-                      <span>FA</span>
+                      <span>{{ t('fa') }}</span>
                       <svg v-show="locale === 'fa'" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                       </svg>

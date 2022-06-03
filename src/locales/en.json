@@ -1,5 +1,7 @@
 {
     "title" : "𝑅𝑒𝒶𝒸𝓉𝒾𝑜𝓃 𝓉𝒾𝓂𝑒𝓇",
+    "en" : "EN",
+    "fa" : "FA",
     "gameBox" : {
         "completedTime" : "now",
         "wait-message" : "waiting for green box ..."
