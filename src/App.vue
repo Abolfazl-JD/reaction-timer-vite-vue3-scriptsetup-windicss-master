@@ -43,7 +43,7 @@ const toggleLocaleLang = (lang : 'en' | 'fa') => {
           >
             {{ t('title') }}
           </h1>
-          <div class="flex justify-between items-center space-x-4">
+          <div class="flex justify-between items-center gap-4">
             <div class="theme-switcher ltr:sm:pr-5 rtl:sm:pl-5" @click="toggleThemeMode()">
               <transition mode="out-in" name="theme-switch">
                 <svg
